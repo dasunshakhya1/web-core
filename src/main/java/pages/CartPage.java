@@ -24,4 +24,8 @@ public class CartPage {
         return ProductView.getProducts(CART_ITEM);
     }
 
+    public static  void navigateToCheckout(){
+        ElementHandler.click(CHECKOUT);
+    }
+
 }

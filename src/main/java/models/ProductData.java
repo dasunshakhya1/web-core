@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Objects;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -18,7 +19,13 @@ public class ProductData {
     private String price;
     private String description;
     private String cartButton;
-    private  int id;
+    private int id;
+
+
+    public double getPrice() {
+        return Double.parseDouble(price.replace("$", ""));
+    }
+
 
 
     @Override
