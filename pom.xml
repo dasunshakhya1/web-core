@@ -15,7 +15,7 @@
         <selenium.version>4.7.1</selenium.version>
         <testng.version>7.7.0</testng.version>
         <lombok.versioin>1.18.24</lombok.versioin>
-        <nxjsonparser.version>0.2.1</nxjsonparser.version>
+        <nxjsonparser.version>0.2.2</nxjsonparser.version>
     </properties>
 
 
