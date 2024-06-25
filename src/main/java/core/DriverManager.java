@@ -1,12 +1,15 @@
 package core;
 
-import lombok.extern.slf4j.Slf4j;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-@Slf4j
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 class DriverManager {
 
 
@@ -22,19 +25,19 @@ class DriverManager {
 
 
     private static WebDriver getRequestedDriver() {
-        WebDriver _driver;
+        WebDriver webDriver;
         String browser = Configs.BROWSER;
         switch (browser) {
             case "FIREFOX":
-                _driver = getFirefoxDriver();
+                webDriver = getFirefoxDriver();
                 break;
             case "SAFARI":
-                _driver = getSafariDriver();
+                webDriver = getSafariDriver();
                 break;
             default:
-                _driver = getChromeDriver();
+                webDriver = getChromeDriver();
         }
-        return _driver;
+        return webDriver;
     }
 
 

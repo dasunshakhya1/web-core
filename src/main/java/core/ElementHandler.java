@@ -1,6 +1,9 @@
 package core;
 
 import enums.SelectOptions;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +15,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ElementHandler {
 
+    @Getter
     private static WebDriver driver;
 
     public static void openApplication() {
@@ -22,10 +26,6 @@ public class ElementHandler {
         driver.get(Configs.BASE_URL);
     }
 
-
-    public static WebDriver getDriver() {
-        return driver;
-    }
 
     public static WebElement findElement(By by) {
         return driver.findElement(by);
@@ -90,6 +90,7 @@ public class ElementHandler {
                 break;
             case INDEX:
                 select.selectByIndex((Integer) option);
+                break;
             default:
                 select.selectByVisibleText((String) option);
         }
