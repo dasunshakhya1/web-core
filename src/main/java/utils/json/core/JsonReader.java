@@ -4,8 +4,8 @@ package utils.json.core;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import configs.Configs;
 import utils.json.annotations.JsonId;
-import utils.json.configs.Configs;
 import utils.json.exceptions.JsonFileNotFoundException;
 import utils.json.exceptions.KeyFieldNotFoundException;
 
